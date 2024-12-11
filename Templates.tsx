@@ -1,5 +1,56 @@
 export default  [
     {
+        name: 'SEO Optimization',
+        desc: 'A step-by-step form to gather information for SEO optimization.',
+        category: 'SEO',
+        icon: 'https://cdn-icons-png.flaticon.com/128/2885/2885481.png',
+        aiPrompt: 'Based on the provided inputs, generate SEO titles, meta descriptions, a sitemap ready for Google Search Console, and an optimized structure with Hn headings.',
+        slug: 'seo-optimization',
+        form: [
+            {
+                label: 'Select type of website',
+                field: 'select',
+                name: 'websiteType',
+                options: [
+                    { label: 'Web', value: 'web' },
+                    { label: 'E-commerce', value: 'ecommerce' },
+                    { label: 'Blog', value: 'blog' }
+                ],
+                required: true
+            },
+            {
+                label: 'Select location for optimization',
+                field: 'select',
+                name: 'locationType',
+                options: [
+                    { label: 'City', value: 'city' },
+                    { label: 'National', value: 'national' },
+                    { label: 'International', value: 'international' }
+                ],
+                required: true
+            },
+            {
+                label: 'Enter the target URL',
+                field: 'input',
+                name: 'targetUrl',
+                placeholder: 'https://example.com',
+                required: true
+            },
+            {
+                label: 'Select the framework used',
+                field: 'select',
+                name: 'framework',
+                options: [
+                    { label: 'WordPress', value: 'wordpress' },
+                    { label: 'Next.js', value: 'nextjs' },
+                    { label: 'Prestashop', value: 'prestashop' },
+                    { label: 'Other', value: 'other' }
+                ],
+                required: true
+            }
+        ]
+    },
+    {
         name:'Blog Title',
         desc:'An AI tool that generate blog title depends on yout blog information',
         category:'Blog',
