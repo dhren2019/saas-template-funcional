@@ -1,129 +1,215 @@
-import { FaCogs, FaBook, FaLayerGroup, FaHeadset } from "react-icons/fa";
+import React from 'react';
 
-export default function HomePage() {
+const Hero: React.FC = () => {
   return (
-    <main className="bg-white">
-      {/* Header Section */}
-      <section className="relative py-20 bg-gray-50">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')",
-          }}
-        ></div>
+    <section
+      className="relative bg-[#030712] text-white py-20 px-6 text-center overflow-hidden"
+      id="hero"
+    >
+      {/* Fondo translúcido detrás */}
+      <div
+        className="absolute inset-0 bg-black opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%)',
+        }}
+      ></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 px-3 rounded-full hover:border-gray-300"
+      {/* Contenido principal */}
+      <div className="relative z-10 max-w-6xl mx-auto">
+        {/* Título */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Vídeos que volverán <br className="hidden md:block" />
+          a ver una y otra vez.
+        </h1>
+
+        {/* Subtítulo */}
+        <p className="text-lg md:text-xl font-light mb-8">
+          Utilice nuestros modelos de inteligencia artificial de última generación para llevar sus vídeos de buenos a excelentes.
+        </p>
+
+        {/* Contenedor de Imagen con Glass y Glow */}
+        <div className="relative group mx-auto mt-10 max-w-4xl">
+          {/* Glow animado ajustado */}
+          <div
+            className="absolute rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 blur-lg opacity-50 -z-10 animate-glow-border-subtle"
+            style={{
+              width: '103%',
+              height: '103%',
+              top: '-1.5%',
+              left: '-1.5%',
+            }}
+          ></div>
+
+          {/* Contenedor del efecto Glass */}
+          <div
+            className="relative rounded-lg p-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md"
+            style={{
+              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
+            }}
           >
-            🔥 Join Membership just for $9.99/Month
-          </a>
-          <h1 className="mt-5 text-4xl font-bold text-gray-800 md:text-5xl lg:text-6xl">
-            AI Content
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">
-              {" "}
-              Generator
-            </span>
-          </h1>
-          <p className="mt-5 text-lg text-gray-600">
-            Revolutionize your content creation with our AI-powered app,
-            delivering engaging and high-quality text in seconds.
-          </p>
-          <div className="mt-8">
-            <a
-              href="/sign-in"
-              className="bg-gradient-to-r from-blue-600 to-violet-600 text-white px-8 py-4 rounded-full text-lg shadow-lg inline-flex items-center justify-center"
-            >
-              Get started
-            </a>
+            {/* Imagen */}
+            <img
+              src="/hero-image.avif"
+              alt="Hero Screenshot"
+              className="relative z-10 max-w-full mx-auto rounded-lg"
+            />
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Feature 1 */}
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mx-auto">
-                <FaLayerGroup size={24} />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold text-gray-800">
-                25+ templates
-              </h3>
-              <p className="mt-2 text-gray-600">
-                Responsive, and mobile-first project on the web
-              </p>
-              <a
-                href="#"
-                className="mt-2 inline-block text-sm text-blue-600 hover:underline"
-              >
-                Learn more
-              </a>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mx-auto">
-                <FaCogs size={24} />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold text-gray-800">
-                Customizable
-              </h3>
-              <p className="mt-2 text-gray-600">
-                Components are easily customized and extendable
-              </p>
-              <a
-                href="#"
-                className="mt-2 inline-block text-sm text-blue-600 hover:underline"
-              >
-                Learn more
-              </a>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mx-auto">
-                <FaBook size={24} />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold text-gray-800">
-                Free to Use
-              </h3>
-              <p className="mt-2 text-gray-600">
-                Every component and plugin is well documented
-              </p>
-              <a
-                href="#"
-                className="mt-2 inline-block text-sm text-blue-600 hover:underline"
-              >
-                Learn more
-              </a>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mx-auto">
-                <FaHeadset size={24} />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold text-gray-800">
-                24/7 Support
-              </h3>
-              <p className="mt-2 text-gray-600">
-                Contact us 24 hours a day, 7 days a week
-              </p>
-              <a
-                href="#"
-                className="mt-2 inline-block text-sm text-blue-600 hover:underline"
-              >
-                Learn more
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        {/* Botón */}
+        <button
+          className="mt-6 bg-purple-600 hover:bg-purple-700 transition-all text-white py-3 px-6 rounded-lg font-medium text-lg shadow-lg"
+        >
+          Descargar ahora
+        </button>
+      </div>
+    </section>
   );
-}
+};
+
+
+// Gold Standard Section
+const GoldStandard: React.FC = () => {
+  return (
+    <section className="bg-[#1d0237] text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12">The new Gold Standard.</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { title: "Endless Ideation", text: "Never worry about creative blocks again." },
+            { title: "Benchmark with AI", text: "Get insights powered by AI tools." },
+            { title: "Aesthetic Excellence", text: "Achieve studio-grade visuals." },
+            { title: "Pixels Perfected", text: "Craft every pixel with precision." },
+          ].map((feature, index) => (
+            <div key={index} className="p-6 bg-[#290f4c] rounded-lg shadow-lg">
+              <img
+                src={`/small-screenshot${index + 1}.avif`}
+                alt={`Feature ${index + 1}`}
+                className="w-full rounded-lg mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+              <p className="text-sm text-gray-300">{feature.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Workflow Section
+const Workflow: React.FC = () => {
+  return (
+    <section className="bg-gradient-to-b from-[#1d0237] to-[#290f4c] text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+          Your videos. Your workflow.
+        </h2>
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="w-full md:w-1/2">
+            <pre className="bg-black text-green-400 p-6 rounded-lg shadow-lg overflow-x-auto">
+              {`const page = await client.getByUID('example', params.uid);`}
+            </pre>
+          </div>
+          <div className="w-full md:w-1/2 text-gray-300">
+            <p className="mb-6">
+              Create the next viral video. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <img
+              src="/long-screenshot1.avif"
+              alt="Workflow Screenshot"
+              className="rounded-lg shadow-lg"
+            />
+            <button className="bg-purple-600 hover:bg-purple-700 py-3 px-6 rounded-lg mt-6">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Testimonios Section
+const Testimonials: React.FC = () => {
+  return (
+    <section className="bg-[#1d0237] text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+          Creators like you love Repeat
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { name: "Nike", image: "/showcase-image.avif", description: "Read Nike's case study" },
+            {
+              name: "Prismic",
+              image: "/polygon-bg-element.svg",
+              description: "Learn how Prismic boosted conversions",
+            },
+          ].map((company, index) => (
+            <div key={index} className="p-6 bg-[#290f4c] rounded-lg shadow-lg">
+              <img
+                src={company.image}
+                alt={company.name}
+                className="w-full rounded-lg mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-4">{company.name}</h3>
+              <p className="text-sm text-gray-300">{company.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Integrations Section
+const Integrations: React.FC = () => {
+  return (
+    <section className="bg-gradient-to-b from-[#290f4c] to-[#1d0237] text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-12">Integrations galore.</h2>
+        <p className="text-lg text-gray-300 mb-12">
+          The integrations your team needs to be productive.
+        </p>
+        <div className="flex justify-center gap-8">
+          {["npm", "github", "figma", "slack"].map((tool, index) => (
+            <img
+              key={index}
+              src={`/icons/${tool}.svg`} // Asegúrate de incluir los íconos en esta ruta
+              alt={tool}
+              className="w-16 h-16"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Footer Section
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-[#1d0237] text-white py-10 text-center">
+      <p className="text-sm text-gray-400">
+        &copy; {new Date().getFullYear()} Repeat AI. All rights reserved.
+      </p>
+    </footer>
+  );
+};
+
+// Página Principal
+const Home: React.FC = () => {
+  return (
+    <>
+      <Hero />
+      <GoldStandard />
+      <Workflow />
+      <Testimonials />
+      <Integrations />
+      <Footer />
+    </>
+  );
+};
+
+export default Home;
