@@ -69,33 +69,87 @@ const Hero: React.FC = () => {
 
 
 // Gold Standard Section
-const GoldStandard: React.FC = () => {
-  return (
-    <section className="bg-[#1d0237] text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-12">The new Gold Standard.</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { title: "Endless Ideation", text: "Never worry about creative blocks again." },
-            { title: "Benchmark with AI", text: "Get insights powered by AI tools." },
-            { title: "Aesthetic Excellence", text: "Achieve studio-grade visuals." },
-            { title: "Pixels Perfected", text: "Craft every pixel with precision." },
-          ].map((feature, index) => (
-            <div key={index} className="p-6 bg-[#290f4c] rounded-lg shadow-lg">
+  const GoldStandard: React.FC = () => {
+    return (
+      <section className="bg-[#030712] text-white py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Título */}
+          <h2 className="text-3xl md:text-5xl font-bold mb-12">
+            El nuevo <span className="text-yellow-400">patrón oro</span>.
+          </h2>
+          <p className="text-gray-300 mb-12">
+            Presentamos una nueva forma de crear contenido dinámico que deja todo lo demás atrás.
+          </p>
+  
+          {/* Grid */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-8">
+            {/* Primera fila, primera columna (pequeña) */}
+            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
               <img
-                src={`/small-screenshot${index + 1}.avif`}
-                alt={`Feature ${index + 1}`}
-                className="w-full rounded-lg mb-4"
+                src="/small-screenshot1.avif"
+                alt="Ideación sin fin"
+                className="w-full rounded-t-lg"
               />
-              <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-              <p className="text-sm text-gray-300">{feature.text}</p>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Ideación sin fin</h3>
+                <p className="text-sm text-gray-300">
+                  Piensa en nuevas ideas más rápido de lo que tardas en abrir Final Cut Pro.
+                </p>
+              </div>
             </div>
-          ))}
+  
+            {/* Primera fila, segunda columna (grande) */}
+            <div className="row-span-2 bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <img
+                src="/long-screenshot1.avif"
+                alt="Evaluación comparativa con IA"
+                className="w-full rounded-t-lg"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Evaluación comparativa con IA</h3>
+                <p className="text-sm text-gray-300">
+                  Nunca más te preocupes por los costosos CGI, ahora puedes obtener todos los
+                  beneficios de un estudio de cine con nuestra tecnología generativa.
+                </p>
+              </div>
+            </div>
+  
+            {/* Segunda fila, primera columna (grande) */}
+            <div className="row-span-2 bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <img
+                src="/long-screenshot.avif"
+                alt="Excelencia estética"
+                className="w-full rounded-t-lg"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Excelencia estética</h3>
+                <p className="text-sm text-gray-300">
+                  Alcanza estándares visuales dignos de un estudio.
+                </p>
+              </div>
+            </div>
+  
+            {/* Segunda fila, segunda columna (pequeña) */}
+            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <img
+                src="/small-screenshot1.avif"
+                alt="Píxeles perfeccionados"
+                className="w-full rounded-t-lg"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Píxeles perfeccionados</h3>
+                <p className="text-sm text-gray-300">
+                  Nuestras funciones potencian tu próximo gran proyecto, ya sea un cortometraje o un
+                  largometraje.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  };
+  
 
 // Workflow Section
 const Workflow: React.FC = () => {
