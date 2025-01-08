@@ -29,14 +29,14 @@ const Hero: React.FC = () => {
 
         {/* Contenedor de Imagen con Glass y Glow */}
         <div className="relative group mx-auto mt-10 max-w-4xl">
-          {/* Glow animado ajustado */}
+          {/* Glow animado ajustado como iluminación */}
           <div
-            className="absolute rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 blur-lg opacity-50 -z-10 animate-glow-border-subtle"
+            className="absolute rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 blur-3xl opacity-20 -z-10 animate-glow-light"
             style={{
-              width: '103%',
-              height: '103%',
-              top: '-1.5%',
-              left: '-1.5%',
+              width: '102%', // Reduce el tamaño para minimizar el sobresaliente
+    height: '102%', // Reduce la altura para evitar sobresalir mucho arriba y abajo
+    top: '-1%', // Ajusta para centrar el glow
+    left: '-1%', // Mantiene el glow centrado horizontalmente
             }}
           ></div>
 
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
 
         {/* Botón */}
         <button
-          className="mt-6 bg-purple-600 hover:bg-purple-700 transition-all text-white py-3 px-6 rounded-lg font-medium text-lg shadow-lg"
+            className="mt-6 px-4 py-2 text-sm font-medium rounded-full border border-blue-500 text-blue-500 hover:text-purple-500 hover:border-purple-500 transition-all"
         >
           Descargar ahora
         </button>
